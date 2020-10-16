@@ -1,2 +1,2 @@
 # DebtManager
- Simple web application to track who owes you how much money.
+ Simple web application to tracks who owes you how much money written in python with django.
