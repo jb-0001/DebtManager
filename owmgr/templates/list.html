@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OwMGR v0.1</title>
+</head>
+<body>
+
+<button onclick='window.location.href="{% url 'transaction form' %}"'>Add new Transaction</button>
+
+<h3>Due:</h3>
+
+{% for transaction in transactions %}
+    <div>
+        <p>{{ transaction }}
+            {% csrf_token %}
+            <button formmethod="POST" id="paid_button">Mark as Paid</button>
+        </p>
+    </div>
+{% endfor %}
+
+</body>
+</html>

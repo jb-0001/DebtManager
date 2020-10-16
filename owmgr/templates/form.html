@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OwMGR v0.1</title>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script>
+$(document).ready(function() {
+    $('.datepicker').datepicker({
+        dateFormat: "yy-mm-dd"
+    });
+});
+</script>
+</head>
+<body>
+<form method="POST" action="/">
+    <div class="form-group">
+        {% csrf_token %}
+        {{ form.title }}
+        {{ form.due }}
+    <input type="submit" name="Create Transaction">
+    </div>
+</form>
+</body>
+</html>
